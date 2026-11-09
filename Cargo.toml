@@ -1,0 +1,38 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/core",
+    "crates/protocol",
+    "crates/client",
+    "crates/server",
+    "crates/addon",
+]
+default-members = ["crates/client"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+authors = ["WG"]
+repository = "https://github.com/yourname/bedrock-rs"
+
+[workspace.dependencies]
+anyhow = "1"
+thiserror = "1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+byteorder = "1"
+log = "0.4"
+env_logger = "0.11"
+glam = "0.29"
+image = { version = "0.25", default-features = false, features = ["png"] }
+winit = "0.30"
+wgpu = "23"
+pollster = "0.4"
+tokio = { version = "1", features = ["full"] }
+bytes = "1"
+dashmap = "6"
+parking_lot = "0.12"
+uuid = { version = "1", features = ["v4", "serde"] }
+chrono = { version = "0.4", features = ["serde"] }
+bytemuck = { version = "1", features = ["derive"] }
